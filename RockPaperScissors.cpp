@@ -8,7 +8,7 @@ using namespace std;
 int main() {
 	// Introduction to the game
 	cout << "This is my rock paper scissors game" << endl;
-	cout << "Player 1 choose your move: " << endl;
+	cout << "Player 1 choose your move (rock,paper,scissors) " << endl;
 
 	// Variable to control whether to play again
 	bool playagain = true;
