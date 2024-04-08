@@ -45,8 +45,12 @@ int main() {
 				 (move == "rock" && Aimove[randomAimove] == "scissors")) {
 			cout << "Player 1 wins" << endl;
 		}
-		else {
+		else if (move == Aimove[randomAimove]) {
 			cout << "IT'S A TIE" << endl;
+		}
+		else {
+			cout << "Invalid input by player";
+			return 0;
 		}
 
 		// Asking if the player wants to play again
@@ -55,12 +59,18 @@ int main() {
 		cin >> playChoice;
 		if (playChoice == 'Y' || playChoice == 'y') {
 			playagain = true;
-			cout << "Choose move:";
+			cout << "Choose move (rock/paper/scissors)";
 		}
 		else if (playChoice == 'N' || playChoice == 'n') {
 			playagain = false;
-			cout << "Thank you for playing";
+			cout << "Thank you for playing :D";
+			return 0;
+		}
+		else {
+			cout << "Invalid input by player";
 			return 0;
 		}
 	}
+
+	return 0;
 }
