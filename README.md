@@ -1,2 +1,2 @@
 # CodingProgress
-This are my C++ beginner projects.
+These are my C++ beginner projects.
