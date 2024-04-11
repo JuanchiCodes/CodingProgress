@@ -1,6 +1,5 @@
 #include <iostream>
 
-using namespace std;
 
 int main() {
     char operations;
@@ -9,51 +8,51 @@ int main() {
     bool retry = true;
 
     // Displaying a welcome message
-    cout << "This is my very simple calculator app" << endl;
+    std::cout << "This is my very simple calculator app" << std::endl;
 
     // Main loop of the calculator program
     while (retry == true) {
         // Prompting the user to choose an operation
-        cout << "Which operation would you like to perform (+, -, *, /): ";
-        cin >> operations;
+        std::cout << "Which operation would you like to perform (+, -, *, /): ";
+        std::cin >> operations;
 
         // Checking if the entered operation is valid
         if (operations != '+' && operations != '-' && operations != '/' && operations != '*') {
-            cout << "Invalid operation";
+           std::cout << "Invalid operation";
             return 0; // Exiting the program if the operation is invalid
         }
 
         // Prompting the user to enter two numbers
-        cout << "Choose numbers for calculation: " << endl;
-        cout << "First number: ";
-        if (!(cin >> num1)) {
-            cout << "Invalid input. must enter a number";
+        std::cout << "Choose numbers for calculation: " << std::endl;
+        std::cout << "First number: ";
+        if (!(std::cin >> num1)) {
+            std::cout << "Invalid input. must enter a number";
             return 0; // Exiting the program if the input is not a number
         }
-        cout << "Second number: ";
-        if (!(cin >> num2)) {
-            cout << "Invalid input. must enter a number";
+        std::cout << "Second number: ";
+        if (!(std::cin >> num2)) {
+            std::cout << "Invalid input. must enter a number";
             return 0; // Exiting the program if the input is not a number
         }
 
         // Performing the selected operation based on the user's input
         switch (operations) {
         case '+':
-            cout << "You chose addition" << endl << num1 << " + " << num2 << " = : " << num1 + num2 << endl;
+            std::cout << "You chose addition" << std::endl << num1 << " + " << num2 << " = : " << num1 + num2 << std::endl;
             break;
         case '-':
-            cout << "You chose subtraction" << endl << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+            std::cout << "You chose subtraction" << std::endl << num1 << " - " << num2 << " = " << num1 - num2 << std::endl;
             break;
         case '*':
-            cout << "You chose multiplication" << endl << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+            std::cout << "You chose multiplication" << std::endl << num1 << " * " << num2 << " = " << num1 * num2 << std::endl;
             break;
         case '/':
             if (num2 == 0) {
-                cout << "Cannot divide by zero";
+                std::cout << "Cannot divide by zero";
                 break;
             }
             else {
-                cout << "You chose division" << endl << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+                std::cout << "You chose division" << std::endl << num1 << " / " << num2 << " = " << num1 / num2 << std::endl;
             }
         }
 
@@ -63,21 +62,21 @@ int main() {
         // Loop for handling retry option
         while (retry2 == true) {
             // Prompting the user to choose whether to use the calculator again
-            cout << "Would you like to try and use the calculator again? (Y/N): ";
-            cin >> choice;
+            std::cout << "Would you like to try and use the calculator again? (Y/N): ";
+            std::cin >> choice;
 
             // Handling the user's choice
             if (choice == 'Y' || choice == 'y') {
-                cout << "Okayyy :D ";
+                std::cout << "Okayyy :D ";
                 retry2 = false; // Exiting the retry loop if the user chooses to continue
             }
             else if (choice == 'n' || choice == 'N') {
-                cout << "Okayyy, thank you for using the calculator" << endl;
+                std::cout << "Okayyy, thank you for using the calculator" << std::endl;
                 retry = false; // Exiting the main loop if the user chooses not to continue
                 return 0;
             }
             else {
-                cout << "Invalid input, you must choose (Y/N)" << endl;
+                std::cout << "Invalid input, you must choose (Y/N)" << std::endl;
                 continue; // Restarting the loop if the input is invalid
             }
         }
