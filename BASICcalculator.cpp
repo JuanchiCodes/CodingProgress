@@ -27,12 +27,12 @@ int main() {
         cout << "Choose numbers for calculation: " << endl;
         cout << "First number: ";
         if (!(cin >> num1)) {
-            cout << "Invalid input, must enter a number";
+            cout << "Invalid input. must enter a number";
             return 0; // Exiting the program if the input is not a number
         }
         cout << "Second number: ";
         if (!(cin >> num2)) {
-            cout << "Invalid input, must enter a number";
+            cout << "Invalid input. must enter a number";
             return 0; // Exiting the program if the input is not a number
         }
 
