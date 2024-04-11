@@ -1,7 +1,4 @@
 #include <iostream>
-#include <random> // This header is not used in your code, you can remove it
-#include <vector> // This header is not used in your code, you can remove it
-#include <ctime> // This header is not used in your code, you can remove it
 
 using namespace std;
 
