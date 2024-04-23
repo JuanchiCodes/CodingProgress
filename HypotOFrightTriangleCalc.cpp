@@ -8,9 +8,9 @@ int main() {
 	cout << "Formula: C = SQRT(a^2 + b^2) " << endl;
 
 	double a, b, c;
-	cout << "Enter size A: " << endl;
+	cout << "Enter side A: " << endl;
 		cin >> a;
-		cout << "Enter size B: " << endl;
+		cout << "Enter side B: " << endl;
 		cin >> b;
 
 		c = sqrt(pow(a, 2) + pow(b, 2));
