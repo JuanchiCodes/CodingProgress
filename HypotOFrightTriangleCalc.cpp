@@ -8,14 +8,14 @@ int main() {
 	cout << "Formula: C = SQRT(a^2 + b^2) " << endl;
 
 	double a, b, c;
-	cout << "Enter first Number: " << endl;
+	cout << "Enter size A: " << endl;
 		cin >> a;
-		cout << "Enter second number" << endl;
+		cout << "Enter size B: " << endl;
 		cin >> b;
 
 		c = sqrt(pow(a, 2) + pow(b, 2));
 
-		cout << "The result: " << c;
+		cout << "Side C: " << c;
 	return 0;
 }
 
