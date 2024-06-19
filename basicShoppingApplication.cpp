@@ -15,35 +15,40 @@ void mainMenu();
 
 void display(const vector<string>& itemsShoppedFor) {
     for (const string& item : itemsShoppedFor) {
-        cout << item << " ";
+        cout << ". " << item << " " << endl;
     }
     cout << endl;
 }
 
 void mainMenu() {
     string action;
+    bool wrongInput = true;
+    while (wrongInput) {
+        cout << "What would you like to do?" << endl;
+        cout << "Shop." << endl;
+        cout << "View Cart." << endl;
+        cout << "Stop shopping." << endl;
 
-    cout << "What would you like to do?" << endl;
-    cout << "Shop." << endl;
-    cout << "View Cart." << endl;
-    cout << "Stop shopping." << endl;
+        getline(cin, action);
 
-    getline(cin, action);
+        transform(action.begin(), action.end(), action.begin(), ::toupper);
 
-    transform(action.begin(), action.end(), action.begin(), ::toupper);
-
-    if (action == "SHOP") {
-        shop();
-    }
-    else if (action == "VIEW CART") {
-        display(itemsShoppedFor);
-    }
-    else if (action == "STOP SHOPPING") {
-        cout << "Thank you for using the app :)";
-        return;
-    }
-    else {
-        cout << "Invalid input. Please enter 'Shop', 'View Cart', or 'Quit'." << endl;
+        if (action == "SHOP") {
+            wrongInput = false;
+            shop();
+        }
+        else if (action == "VIEW CART") {
+            wrongInput = false;
+            display(itemsShoppedFor);
+        }
+        else if (action == "STOP SHOPPING") {
+            cout << "Thank you for using the app :)";
+            return;
+        }
+        else {
+            cout << "Invalid input. Please enter 'Shop', 'View Cart', or 'Quit'." << endl;
+            wrongInput = true;
+        }
     }
 }
 
